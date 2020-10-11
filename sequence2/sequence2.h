@@ -140,12 +140,14 @@ namespace main_savitch_4
         void remove_current( );
         void resize(size_type new_capacity);
         void operator=(const sequence& source);
+
         // CONSTANT MEMBER FUNCTIONS
-        size_type size( ) const;
-        bool is_item( ) const;
+        size_type size( ) const{return used;}
+        bool is_item( ) const {return (current_index<used);}
         value_type current( ) const;
-        // value_type& operator[](size_type idx);
+       // value_type& operator[](size_type idx);
         value_type operator[](size_type idx) const;
+
     private:
 // -- Fill in your private member variables here.
 //        -- You'll need a pointer to a dynamic array, and a size_type
@@ -157,8 +159,8 @@ namespace main_savitch_4
 // -- another size_type variable to keep track of the
 //        -- complete capacity of the dynamic array.
     	size_type capacity;
-     };
-
+    };
+    
     //non member fucntion:
     sequence operator+(const sequence& s1, const sequence& s2);
 }
