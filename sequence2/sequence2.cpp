@@ -1,5 +1,5 @@
 #include <assert.h>
-#include <cstring>
+#include <string.h>
 #include "sequence2.h"
 #include<algorithm> // for copy operator
 namespace main_savitch_4
