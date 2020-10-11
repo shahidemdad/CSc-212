@@ -1,7 +1,9 @@
 #include <assert.h>
-#include <string.h>
+#include <cstring>
 #include "sequence2.h"
 #include<algorithm> // for copy operator
+using namespace std;
+
 namespace main_savitch_4
 {
   const sequence::size_type sequence::DEFAULT_CAPACITY;
