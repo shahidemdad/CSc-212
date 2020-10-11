@@ -118,6 +118,7 @@ CONSTANT MEMBER FUNCTIONS
 #ifndef MAIN_SAVITCH_SEQUENCE2_H
 #define MAIN_SAVITCH_SEQUENCE2_H
 #include <cstdlib>  // Provides size_t
+#include <cstring>
 
 namespace main_savitch_4
 {
@@ -141,7 +142,7 @@ namespace main_savitch_4
         void resize(size_type new_capacity);
         void operator=(const sequence& source);
         void operator+=(const sequence& addend);
-        
+
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const{return used;}
         bool is_item( ) const {return (current_index<used);}
