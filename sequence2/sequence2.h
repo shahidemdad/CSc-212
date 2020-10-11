@@ -160,10 +160,11 @@ namespace main_savitch_4
 //        -- complete capacity of the dynamic array.
     	size_type capacity;
     };
-    
+
     //non member fucntion:
     sequence operator+(const sequence& s1, const sequence& s2);
 }
 
 #endif
+
 // END OF CODE

@@ -3,7 +3,6 @@
 #include<algorithm> // for copy operator
 namespace main_savitch_4
 {
-
   const sequence::size_type sequence::DEFAULT_CAPACITY;
 //     sequence::DEFAULT_CAPACITY is the initial capacity of a sequence that is
 //     created by the default constructor.
