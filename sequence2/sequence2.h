@@ -140,7 +140,8 @@ namespace main_savitch_4
         void remove_current( );
         void resize(size_type new_capacity);
         void operator=(const sequence& source);
-
+        void operator+=(const sequence& addend);
+        
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const{return used;}
         bool is_item( ) const {return (current_index<used);}
