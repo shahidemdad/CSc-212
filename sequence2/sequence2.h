@@ -11,7 +11,7 @@
 //     may be any of the C++ built-in types (int, char, etc.), or a class with a
 //     default constructor, an assignment operator, and a copy constructor.
 //
-//   typedef ____ size_type
+//   typedef ____ size_types
 //     sequence::size_type is the data type of any variable that keeps track of
 //     how many items are in a sequence.
 //
