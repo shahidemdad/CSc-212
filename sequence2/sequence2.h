@@ -105,16 +105,11 @@ MODIFICATION MEMBER FUNCTIONS
 
 CONSTANT MEMBER FUNCTIONS
 
-    size_type curIdx( ) const;
-        Postcondition: returns the value of m_currentIdx
-
-    size_type curCapacity( ) const;
-        Postcondition: returns the value of m_capacity
-
     value_type operator[](size_type idx);
         Precondition: A positive integer index less than the amount of items in the sequence is entered
         Postcondition: The value at that index is returned
 */
+
 #ifndef MAIN_SAVITCH_SEQUENCE2_H
 #define MAIN_SAVITCH_SEQUENCE2_H
 #include <cstdlib>  // Provides size_t
@@ -147,19 +142,19 @@ namespace main_savitch_4
         size_type size( ) const{return used;}
         bool is_item( ) const {return (current_index<used);}
         value_type current( ) const;
-       // value_type& operator[](size_type idx);
+        // value_type& operator[](size_type idx);
         value_type operator[](size_type idx) const;
 
     private:
-// -- Fill in your private member variables here.
-//        -- You'll need a pointer to a dynamic array, and a size_type
+//-- Fill in your private member variables here.
+//      -- You'll need a pointer to a dynamic array, and a size_type
     	value_type *data;
-//        -- variable to keep track of the current length of the
+//      -- variable to keep track of the current length of the
     	size_type used;
-//        -- sequence, an index to the current item, and 
+//      -- sequence, an index to the current item, and 
     	size_type current_index;
-// -- another size_type variable to keep track of the
-//        -- complete capacity of the dynamic array.
+//-- another size_type variable to keep track of the
+//      -- complete capacity of the dynamic array.
     	size_type capacity;
     };
 
