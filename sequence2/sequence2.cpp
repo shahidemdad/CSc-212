@@ -1,6 +1,10 @@
 #include <assert.h>
 #include "sequence2.h"
+<<<<<<< HEAD
 #include<algorithm> // for copy operator
+=======
+#include <algorithm> // for copy operator
+>>>>>>> 9a24f4a23c394e49609a4ac647dcadfbe5c82fa0
 
 namespace main_savitch_4
 {
