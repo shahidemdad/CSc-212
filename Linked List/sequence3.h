@@ -1,5 +1,4 @@
-// Provided by:   _____Md Shahid Emdad__________
-// Email Address: ________semdad000@citymail.cuny.edu_______
+// PROVIDED BY: Dor Rondel <dor.rondel@gmail.com> (your name and email address)
 // FILE: sequence3.h
 // CLASS PROVIDED: sequence (a container class for a sequence of items,
 // where each sequence may have a designated item called the current item)
@@ -27,13 +26,13 @@
 //
 //   void insert(const value_type& entry)
 //     Postcondition: A new copy of entry has been inserted in the sequence before
-//     the current item. If there was no current item, then the new entry has 
+//     the current item. If there was no current item, then the new entry has
 //     been inserted at the front of the sequence. In either case, the newly
 //     inserted item is now the current item of the sequence.
 //
 //   void attach(const value_type& entry)
 //     Postcondition: A new copy of entry has been inserted in the sequence after
-//     the current item. If there was no current item, then the new entry has 
+//     the current item. If there was no current item, then the new entry has
 //     been attached to the end of the sequence. In either case, the newly
 //     inserted item is now the current item of the sequence.
 //
@@ -64,6 +63,17 @@
 //   new_handler: The constructors, insert, attach, and the
 //   assignment operator.
 
+/* OWN DOCUMENTATION
+  node* getHead( ) const;
+    Postcondition: head pointer is returned
+  node* getTail( ) const;
+    Postcondition: tail pointer is returned
+  node* getCur( ) const;
+    Postcondition: current item pointer is returned
+  node* getPrev( ) const;
+    Postcondition: previous item pointer is returned
+*/
+
 #ifndef MAIN_SAVITCH_SEQUENCE3_H
 #define MAIN_SAVITCH_SEQUENCE3_H
 #include <cstdlib> // Provides size_t and NULL
@@ -71,7 +81,6 @@
 
 namespace main_savitch_5
 {
-
     class sequence
     {
     public:
@@ -93,10 +102,13 @@ namespace main_savitch_5
         size_t size( ) const;
         bool is_item( ) const;
         value_type current( ) const;
+        node* getHead( ) const;
+        node* getTail( ) const;
+        node* getCur( ) const;
+        node* getPrev( ) const;
     private:
-        -- Declare your private members here. I suggest that
-        -- you have the five private member variables that are
-        -- described in Section 5.4 (page 259) of the textbook.
+      size_type m_nodeCount;
+      node* head_ptr, *tail_ptr, *currentItem_ptr, *prevItem_ptr;
     };
 }
 
