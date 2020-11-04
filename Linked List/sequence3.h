@@ -1,4 +1,5 @@
-// PROVIDED BY: Dor Rondel <dor.rondel@gmail.com> (your name and email address)
+// Provided by:   _____Md Shahid Emdad__________
+// Email Address: ________semdad000@citymail.cuny.edu_______
 // FILE: sequence3.h
 // CLASS PROVIDED: sequence (a container class for a sequence of items,
 // where each sequence may have a designated item called the current item)
