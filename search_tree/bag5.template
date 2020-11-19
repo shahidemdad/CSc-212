@@ -51,14 +51,18 @@ namespace main_savitch_10
 	     */
 
         //Precondition and Postcondition mentioned above
-        if (root_ptr == NULL) return ;
+        
+		//empty pointer
+		if (root_ptr == NULL) return ;
+
+		//switching the pointer.
         else {
             if (root_ptr->right() != NULL) bst_remove_max(root_ptr->right(), removed);
             else if (root_ptr->right() == NULL) {
-                removed = root_ptr->data();
-                binary_tree_node <Item>* tmp_ptr = root_ptr;
-                root_ptr = root_ptr->left();
-                delete tmp_ptr;
+                removed = root_ptr->data(); //initializing the remove
+                binary_tree_node <Item>* tmp_ptr = root_ptr; //getting the reference pointer
+                root_ptr = root_ptr->left(); // again, initializing
+                delete tmp_ptr; // delete the pointer
             }
         }
 	}
@@ -139,19 +143,19 @@ namespace main_savitch_10
 	    if (root_ptr == NULL)
 	    {   // Empty tree
 	        /* STUDENT WORK */
-            return 0;  // nothing to do already empty
+            return 0;  // empty return
 	    }
 
 	    if (target < root_ptr->data( ))
 	    {   // Continue looking in the left subtree
-	        /* STUDENT WORK */
-            bst_remove_all(root_ptr->left(), target);
+	        /* STUDENT WORK */ 
+            bst_remove_all(root_ptr->left(), target); //calling the function for left side
 	    }
 
 	    if (target > root_ptr->data( ))
 	    {   // Continue looking in the right subtree
 	        /* STUDENT WORK */
-            bst_remove_all(root_ptr->right(), target);
+            bst_remove_all(root_ptr->right(), target); //calling the function for right side
 	    }
 	    
 	    if (root_ptr->left( ) == NULL)
@@ -171,8 +175,8 @@ namespace main_savitch_10
 	    // the maximum element that we moved up from our left subtree
 	    // might also be a copy of the target).
 	    /* STUDENT WORK */
-        bst_remove_all(root_ptr->left(), root_ptr->data());
-	    return bst_remove_all(root_ptr, target);
+        bst_remove_all(root_ptr->left(), root_ptr->data()); //calling the function for both left and right side
+	    return bst_remove_all(root_ptr, target); // return the function
 	}
 
     template <class Item>
@@ -214,21 +218,21 @@ namespace main_savitch_10
                 /* STUDENT WORK */
                 while(1) {
                     if (cursor->data() < entry) {
-                        if (cursor->right() == NULL) {
+                        if (cursor->right() == NULL) { // if the pointer is null do the following code
                             cursor->right() = new binary_tree_node<Item>(entry);
                             break;
                         }
                         cursor = cursor->right();
                     }
                     else if (cursor->data() > entry) {
-                        if (cursor->left() == NULL) {
+                        if (cursor->left() == NULL) { // if the pointer is null do the following code
                             cursor->left() = new binary_tree_node<Item>(entry);
                             break;
                         }
                         cursor = cursor->left();
                     }
                     else if (cursor->data() == entry) {
-                        if (cursor->left() == NULL) {
+                        if (cursor->left() == NULL) { // if the pointer is null do the following code
                             cursor->left() = new binary_tree_node<Item>(entry);
                             break;
                         }
@@ -246,8 +250,8 @@ namespace main_savitch_10
 
 	    cursor = root_ptr;
 	    /* STUDENT WORK */
-        if (root_ptr == NULL) return 0;
-        else {
+        if (root_ptr == NULL) return 0; //empty pointer
+        else { // else do the following
             while (cursor != NULL) {
                 if (cursor->data() < target) cursor = cursor->right();
                 else if (cursor->data() > target) cursor = cursor->left();
