@@ -1,6 +1,6 @@
 /*
 Editor: MdShahid Bin Emdad
-File: sequence3.cpp
+File: bag5.h
 Professor: George Wolberg
 */
 
