@@ -1,5 +1,6 @@
                       Programming Assignment 3:  Revise the sequence Class to Use a Dynamic Array (Chapter 4)
-                      [Assingmnent Link](http://www-cs.ccny.cuny.edu/~wolberg/cs212/hw/hw3.html)
+
+[Assingmnent Link](http://www-cs.ccny.cuny.edu/~wolberg/cs212/hw/hw3.html)
 The Assignment:
 You will implement and test a revised sequence class that uses a dynamic array to store the items.
 Purposes:
